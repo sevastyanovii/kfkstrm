@@ -135,7 +135,12 @@ public class PageViewTypedDemo {
             @JsonSubTypes.Type(value = UserProfile.class, name = "up"),
             @JsonSubTypes.Type(value = PageViewByRegion.class, name = "pvbr"),
             @JsonSubTypes.Type(value = WindowedPageViewByRegion.class, name = "wpvbr"),
-            @JsonSubTypes.Type(value = RegionCount.class, name = "rc")
+            @JsonSubTypes.Type(value = RegionCount.class, name = "rc"),
+            @JsonSubTypes.Type(value = POJO.PageView.class, name = "pvg"),
+            @JsonSubTypes.Type(value = POJO.User.class, name = "u"),
+            @JsonSubTypes.Type(value = POJO.PageViewByGender.class, name = "pvbg"),
+            @JsonSubTypes.Type(value = POJO.WindowedPageViewByGender.class, name = "wpvbg"),
+            @JsonSubTypes.Type(value = POJO.GenderCount.class, name = "gc")
     })
     public interface JSONSerdeCompatible {
 
